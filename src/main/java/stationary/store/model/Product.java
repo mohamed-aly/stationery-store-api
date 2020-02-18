@@ -11,14 +11,14 @@ public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private int productId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 
     @Column(name = "name")
-    private String name;
+    private String productName;
 
     @Column(name = "description")
     private String description;
@@ -33,7 +33,7 @@ public class Product implements Serializable {
     @OneToMany(
             mappedBy = "product",
             cascade = CascadeType.ALL)
-    private List<ProductImage> productImages;
+    private List<ProductImage> imageUrl;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "product", cascade = CascadeType.ALL)
     private List<CartItem> cartItems;
@@ -62,13 +62,6 @@ public class Product implements Serializable {
         this.category = category;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public List<OrderItem> getOrders() {
         return orders;
@@ -94,13 +87,6 @@ public class Product implements Serializable {
         this.packages = packages;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getDescription() {
         return description;
@@ -116,14 +102,6 @@ public class Product implements Serializable {
 
     public void setMinStock(int minStock) {
         this.minStock = minStock;
-    }
-
-    public List<ProductImage> getProductImages() {
-        return productImages;
-    }
-
-    public void setProductImages(List<ProductImage> productImages) {
-        this.productImages = productImages;
     }
 
     public List<ProductPatch> getPatches() {
@@ -142,5 +120,27 @@ public class Product implements Serializable {
         this.offers = offers;
     }
 
+    public int getProductId() {
+        return productId;
+    }
 
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public List<ProductImage> getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(List<ProductImage> imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }

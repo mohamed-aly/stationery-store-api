@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="stationery-store-db" uuid="8f1f9f27-a066-4f81-8e27-5128a73384af">
+    <data-source source="LOCAL" name="persistence-mysql" uuid="b2c921ec-afa4-4f6a-87a3-bdf91a92d8aa">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>jdbc.properties
+
+E:/work/IntelliJ IDEA Projects/Spring 5/stationery/stationery-store-api/src/main/resources/persistence-mysql.properties</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/stationery-store-db</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/stationery-store-db?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
     </data-source>
   </component>
 </project>

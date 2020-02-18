@@ -8,75 +8,48 @@ import org.springframework.stereotype.Repository;
 import stationary.store.dao.offer.OfferDAO;
 import stationary.store.model.Offer;
 
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
 public class OfferDAOImpl implements OfferDAO {
 
-    // need to inject the session factory
     @Autowired
     private SessionFactory sessionFactory;
 
     @Override
     public List<Offer> getOffers() {
-
-        // get the current hibernate session
         Session currentSession = sessionFactory.getCurrentSession();
 
-        // create a query  ... sort by last name
-        Query<Offer> theQuery =
-                currentSession.createQuery("from Offer",
-                        Offer.class);
+        Query<Offer> offerQuery = currentSession.createQuery("select o.offerId, o.discount , o.product.productId , o.product.productName from Offer o LEFT OUTER JOIN  o.product", Offer.class);
+        List<Offer> offers = offerQuery.getResultList();
 
-        // execute query and get result list
-        List<Offer> Offers = theQuery.getResultList();
-
-        // return the results
-        return Offers;
+        return offers;
     }
 
     @Override
-    public void saveOffer(Offer theOffer) {
-
-        // get current hibernate session
+    public void saveOffer(Offer offer) {
         Session currentSession = sessionFactory.getCurrentSession();
-
-        // save/upate the Offer ... finally LOL
-        currentSession.saveOrUpdate(theOffer);
-
+        currentSession.saveOrUpdate(offer);
     }
 
     @Override
-    public Offer getOffer(int theId) {
-
-        // get the current hibernate session
+    public Offer getOffer(int id) {
         Session currentSession = sessionFactory.getCurrentSession();
+        Offer offer = currentSession.get(Offer.class, id);
 
-        // now retrieve/read from database using the primary key
-        Offer theOffer = currentSession.get(Offer.class, theId);
-
-        return theOffer;
+        return offer;
     }
 
     @Override
-    public void deleteOffer(int theId) {
-
-        // get the current hibernate session
+    public void deleteOffer(int id) {
         Session currentSession = sessionFactory.getCurrentSession();
+        Query query = currentSession.createQuery("delete from Offer where id=:offerId");
+        query.setParameter("offerId", id);
 
-        // delete object with primary key
-        Query theQuery =
-                currentSession.createQuery("delete from Offer where id=:offerId");
-        theQuery.setParameter("offerId", theId);
-
-        theQuery.executeUpdate();
+        query.executeUpdate();
     }
-
 }
-
-
-
-
 
 
 

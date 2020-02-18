@@ -60,6 +60,4 @@ public class Grade implements Serializable {
     public void setGradeNumber(int gradeNumber) {
         this.gradeNumber = gradeNumber;
     }
-
-
 }
