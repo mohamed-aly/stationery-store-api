@@ -3,7 +3,7 @@ package stationary.store.service.productImage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.ProductImageDAO;
+import stationary.store.dao.productImage.ProductImageDAO;
 import stationary.store.model.ProductImage;
 
 import java.util.List;

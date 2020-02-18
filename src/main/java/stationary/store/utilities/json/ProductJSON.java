@@ -1,6 +1,6 @@
 package stationary.store.utilities.json;
 
-import org.romani.stationery.store.models.ProductImages;
+import stationary.store.model.ProductImage;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class ProductJSON {
     private String productName;
     private String categoryName;
     private String description;
-    private List<ProductImages> imageUrl;
+    private List<ProductImage> imageUrl;
     private double discount;
     private int minStock;
 
@@ -55,11 +55,11 @@ public class ProductJSON {
         this.description = description;
     }
 
-    public List<ProductImages> getImageUrl() {
+    public List<ProductImage> getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(List<ProductImages> imageUrl) {
+    public void setImageUrl(List<ProductImage> imageUrl) {
         this.imageUrl = imageUrl;
     }
 

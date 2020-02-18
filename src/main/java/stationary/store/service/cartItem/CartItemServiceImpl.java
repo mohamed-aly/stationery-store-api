@@ -3,7 +3,7 @@ package stationary.store.service.cartItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.CartItemDAO;
+import stationary.store.dao.cartItem.CartItemDAO;
 import stationary.store.model.CartItem;
 
 import java.util.List;

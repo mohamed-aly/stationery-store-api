@@ -3,7 +3,7 @@ package stationary.store.service.category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.CategoryDAO;
+import stationary.store.dao.category.CategoryDAO;
 import stationary.store.model.Category;
 
 import java.util.List;

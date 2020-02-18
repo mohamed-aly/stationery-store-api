@@ -3,7 +3,7 @@ package stationary.store.service.shipper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.ShipperDAO;
+import stationary.store.dao.shipper.ShipperDAO;
 import stationary.store.model.Shipper;
 
 import java.util.List;

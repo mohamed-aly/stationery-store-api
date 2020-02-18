@@ -3,7 +3,7 @@ package stationary.store.service.offer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.OfferDAO;
+import stationary.store.dao.offer.OfferDAO;
 import stationary.store.model.Offer;
 
 import java.util.List;

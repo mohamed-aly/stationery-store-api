@@ -3,7 +3,7 @@ package stationary.store.service.grade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.GradeDAO;
+import stationary.store.dao.grade.GradeDAO;
 import stationary.store.model.Grade;
 
 import java.util.List;

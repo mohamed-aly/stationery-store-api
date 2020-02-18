@@ -3,7 +3,7 @@ package stationary.store.service.classifiedProduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.ClassifiedProductDAO;
+import stationary.store.dao.classifiedProduct.ClassifiedProductDAO;
 import stationary.store.model.ClassifiedProduct;
 
 import java.util.List;

@@ -3,7 +3,7 @@ package stationary.store.service.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.UserDAO;
+import stationary.store.dao.user.UserDAO;
 import stationary.store.model.User;
 
 import java.util.List;

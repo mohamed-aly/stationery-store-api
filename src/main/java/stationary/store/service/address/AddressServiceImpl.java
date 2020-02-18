@@ -3,7 +3,7 @@ package stationary.store.service.address;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationary.store.dao.daos.AddressDAO;
+import stationary.store.dao.address.AddressDAO;
 import stationary.store.model.Address;
 
 import java.util.List;
