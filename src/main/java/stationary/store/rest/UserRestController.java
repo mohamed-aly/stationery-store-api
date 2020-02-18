@@ -10,10 +10,10 @@ import stationary.store.model.Address;
 import stationary.store.model.Cart;
 import stationary.store.model.CartItem;
 import stationary.store.model.User;
-import stationary.store.service.AddressService;
-import stationary.store.service.CartItemService;
-import stationary.store.service.CartService;
-import stationary.store.service.UserService;
+import stationary.store.service.address.AddressService;
+import stationary.store.service.cartItem.CartItemService;
+import stationary.store.service.cart.CartService;
+import stationary.store.service.user.UserService;
 
 import java.util.List;
 
