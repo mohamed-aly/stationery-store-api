@@ -1,6 +1,7 @@
 package stationary.store.dao.orderItem;
 
 import stationary.store.model.OrderItem;
+import stationary.store.model.Product;
 
 import java.util.List;
 

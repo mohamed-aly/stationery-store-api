@@ -6,6 +6,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import stationary.store.model.OrderItem;
+import stationary.store.model.Product;
 
 import java.util.List;
 
@@ -33,6 +34,8 @@ public class OrderItemDAOImpl implements OrderItemDAO {
         // return the results
         return OrderItems;
     }
+
+
 
     @Override
     public void saveOrderItem(OrderItem theOrderItem) {

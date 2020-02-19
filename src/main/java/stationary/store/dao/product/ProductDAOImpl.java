@@ -35,6 +35,26 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
+    public List<Product> getBestSellers(int limit) {
+
+        // get the current hibernate session
+        Session currentSession = sessionFactory.getCurrentSession();
+
+        // create a query  ... sort by last name
+        Query<Product> theQuery =
+                currentSession.createQuery("select oi.product as oip from OrderItem oi "+
+                                "group by oi.product " +
+                                "order by sum(oi.quantity) desc" ,
+                        Product.class).setMaxResults(limit);
+
+        // execute query and get result list
+        List<Product> products = theQuery.getResultList();
+
+        // return the results
+        return products;
+    }
+
+    @Override
     public void saveProduct(Product theProduct) {
 
         // get current hibernate session

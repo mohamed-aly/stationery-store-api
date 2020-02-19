@@ -13,7 +13,7 @@ public class Product implements Serializable {
     @Column(name = "id")
     private int productId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
 

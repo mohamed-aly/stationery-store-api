@@ -24,6 +24,14 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
+    public List<Product> getBestSellers( int limit){
+        return productDAO.getBestSellers(limit);
+    }
+
+
+
+    @Override
+    @Transactional
     public void saveProduct(Product theProduct) {
 
         productDAO.saveProduct(theProduct);

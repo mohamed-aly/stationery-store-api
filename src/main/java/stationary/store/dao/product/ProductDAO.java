@@ -8,6 +8,8 @@ public interface ProductDAO {
 
     List<Product> getProducts();
 
+    List<Product> getBestSellers(int limit);
+
     void saveProduct(Product Product);
 
     Product getProduct(int id);
