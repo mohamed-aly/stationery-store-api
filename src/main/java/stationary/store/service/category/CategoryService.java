@@ -9,6 +9,8 @@ public interface CategoryService {
 
     List<Category> getCategories();
 
+    List<Category> getCategories(int limit);
+
     void saveCategory(Category theCategory);
 
     Category getCategory(int theId);

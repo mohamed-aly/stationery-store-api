@@ -6,9 +6,9 @@
 <hr>
 
 <a href="${pageContext.request.contextPath}/api/users">Get All users</a><br>
-<a href="${pageContext.request.contextPath}/api/addresses">Get All addresses</a><br>
-<a href="${pageContext.request.contextPath}/api/carts">Get All carts</a><br>
-<a href="${pageContext.request.contextPath}/api/cartItems">Get All cartItems</a>
+<a href="${pageContext.request.contextPath}/api/product/bestseller?limit=2">Get bestSellers</a><br>
+<a href="${pageContext.request.contextPath}/api/category">Get categories</a><br>
+<a href="${pageContext.request.contextPath}/api/category?limit=5">Get categories with limit</a><br>
 
 </body>
 </html>

@@ -18,6 +18,24 @@ public class CategoryDAOImpl implements CategoryDAO {
     private SessionFactory sessionFactory;
 
     @Override
+    public List<Category> getCategories(Integer limit) {
+
+        // get the current hibernate session
+        Session currentSession = sessionFactory.getCurrentSession();
+
+        // create a query  ... sort by last name
+        Query<Category> theQuery =
+                currentSession.createQuery("from Category",
+                        Category.class).setMaxResults(limit);
+
+        // execute query and get result list
+        List<Category> Categories = theQuery.getResultList();
+
+        // return the results
+        return Categories;
+    }
+
+    @Override
     public List<Category> getCategories() {
 
         // get the current hibernate session

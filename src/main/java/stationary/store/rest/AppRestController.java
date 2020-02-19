@@ -2,17 +2,13 @@ package stationary.store.rest;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import stationary.store.model.Address;
-import stationary.store.model.Cart;
-import stationary.store.model.CartItem;
-import stationary.store.model.User;
+import org.springframework.web.bind.annotation.*;
+import stationary.store.model.*;
 import stationary.store.service.address.AddressService;
 import stationary.store.service.cartItem.CartItemService;
 import stationary.store.service.cart.CartService;
+import stationary.store.service.category.CategoryService;
+import stationary.store.service.product.ProductService;
 import stationary.store.service.user.UserService;
 import stationary.store.utilities.exceptions.NotFoundException;
 
@@ -28,13 +24,46 @@ public class AppRestController {
     private UserService userService;
 
     @Autowired
-    private AddressService addressService;
+    private ProductService productService;
 
     @Autowired
-    private CartService carService;
+    private CategoryService categoryService;
 
-    @Autowired
-    private CartItemService carItemService;
+
+    @GetMapping("/product/bestseller")
+    public List<Product> getBestSellers(@RequestParam int limit) {
+
+        if(limit<1){
+            throw new NotFoundException("Limit should be > 0 - your limit = " + limit);
+        }
+
+        List<Product> products = productService.getBestSellers(limit);
+
+        return products;
+    }
+
+    @GetMapping("/category")
+    public List<Category> getCategoriesWithLimit(@RequestParam(required = false) int limit) {
+
+//        if(limit<1){
+//            throw new NotFoundException("Limit should be > 0 - your limit = " + limit);
+//        }
+
+        List<Category> categories = categoryService.getCategories(limit);
+
+        return categories;
+    }
+
+//    @GetMapping("/category")
+//    public List<Category> getCategories() {
+//
+//        List<Category> categories = categoryService.getCategories();
+//
+//        return categories;
+//    }
+
+
+
 
     // add mapping for GET /users
     @GetMapping("/users")
@@ -44,38 +73,8 @@ public class AppRestController {
 
     }
 
-    @GetMapping("/users/{userId}")
-    public User getUser(@PathVariable int userId) {
 
-        User user = userService.getUser(userId);
 
-        if (user == null) {
-            throw new NotFoundException("Customer id not found - " + userId);
-        }
-
-        return user;
-    }
-
-    @GetMapping("/addresses")
-    public List<Address> getAddresses() {
-
-        return addressService.getAddresses();
-
-    }
-
-    @GetMapping("/carts")
-    public List<Cart> getCarts() {
-
-        return carService.getCarts();
-
-    }
-
-    @GetMapping("/cartItems")
-    public List<CartItem> getCartItems() {
-
-        return carItemService.getCartItems();
-
-    }
 
 }
 	

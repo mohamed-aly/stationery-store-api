@@ -24,6 +24,12 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     @Transactional
+    public List<Category> getCategories(int limit) {
+        return categoryDAO.getCategories(limit);
+    }
+
+    @Override
+    @Transactional
     public void saveCategory(Category theCategory) {
 
         categoryDAO.saveCategory(theCategory);

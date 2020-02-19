@@ -8,6 +8,8 @@ public interface CategoryDAO {
 
     List<Category> getCategories();
 
+    List<Category> getCategories(Integer limit);
+
     void saveCategory(Category Category);
 
     Category getCategory(int id);
