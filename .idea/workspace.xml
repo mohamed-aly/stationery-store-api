@@ -2,24 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b94eca62-b985-45b9-b53a-4a9529e53958" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_29_0_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_2_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_passay_passay_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/shipper/ShipperController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_50.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_cryptacular_cryptacular_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_passay_passay_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-default.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bootstrap/BootStrapMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bootstrap/BootStrapMySQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/address/AddressDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/address/AddressDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/admin/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/admin/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/admin/AdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/admin/AdminServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/cart/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/cart/CartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/cartItem/CartItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/cartItem/CartItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/category/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/category/CategoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/grade/GradeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/grade/GradeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/gradeLevel/GradeLevelDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/gradeLevel/GradeLevelDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/offer/OfferDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/offer/OfferDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/order/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/order/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/orderDetails/OrderDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/orderDetails/OrderDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/orderDetails/OrderDetailsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/orderDetails/OrderDetailsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/orderItem/OrderItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/orderItem/OrderItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/orderStatus/OrderStatusDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/orderStatus/OrderStatusDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/packages/PackageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/packages/PackageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/product/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/product/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/product/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/productImage/ProductImageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/productImage/ProductImageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/productPatch/ProductPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/productPatch/ProductPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/productPatch/ProductPatchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/productPatch/ProductPatchDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/shipper/ShipperDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/shipper/ShipperDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/shipper/ShipperService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/shipper/ShipperServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/userType/UserType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/userType/UserTypeDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/userType/UserTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/userType/UserTypeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/LoggingFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/LssSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/LssUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/validation/PasswordConstraintValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/validation/PasswordConstraintValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/validation/PasswordMatches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/validation/PasswordMatches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/validation/ValidPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/validation/ValidPassword.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stationery-store-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/stationery-store-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-default.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bootstrap/BootStrapMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bootstrap/BootStrapMySQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/address/AddressDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/address/AddressDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/admin/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/admin/AdminDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/admin/AdminDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/admin/AdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/admin/AdminServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/cart/CartDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/cart/CartDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/cartItem/CartItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/cartItem/CartItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/category/CategoryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/category/CategoryDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/customer/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/customer/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/customer/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/customer/CustomerType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/grade/GradeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/grade/GradeDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/gradeLevel/GradeLevelDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/gradeLevel/GradeLevelDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/offer/OfferDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/offer/OfferDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/order/OrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/order/OrderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/orderDetails/OrderDetailsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/orderDetails/OrderDetailsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/orderItem/OrderItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/orderItem/OrderItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/orderStatus/OrderStatusDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/orderStatus/OrderStatusDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/packages/PackageDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/packages/PackageDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/product/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/product/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/product/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/product/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/productImage/ProductImageDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/productImage/ProductImageDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/productPatch/ProductPatchDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/productPatch/ProductPatchDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/shipper/ShipperDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/shipper/ShipperDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/shipper/ShipperService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/shipper/ShipperServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/userType/UserType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/userType/UserTypeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/userType/UserTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/userType/UserTypeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/config/security/LoggingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/config/security/LssSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/config/security/LssUserDetailsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/utilities/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/utilities/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/validation/PasswordConstraintValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/validation/PasswordConstraintValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/validation/PasswordMatches.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/validation/PasswordMatches.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-stationery.store.StationeryStoreApiApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-stationery.store.StationeryStoreApiApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/stationery.store.StationeryStoreApiApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/stationery.store.StationeryStoreApiApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,15 +161,32 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="h2" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/stationery/store/bundle/admin" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="stationery.store" />
+      <recent name="stationery.store.bundle" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="stationery.store.bundle.user" />
+      <recent name="stationery.store.bundle.user.shipper" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\developer\my projects\stationery.store\src\main\java\stationery\store\bundle\admin" />
+      <recent name="E:\developer\my projects\stationery.store\src\main\java\stationery\store\bundle\customer" />
+      <recent name="E:\developer\my projects\stationery.store\src\main\java\stationery\store\bundle\shipper" />
+      <recent name="E:\developer\my projects\stationery.store\src\main\java\stationery\store\bootstrap" />
       <recent name="E:\developer\my projects\stationery.store\src\main\resources" />
     </key>
   </component>
@@ -84,7 +221,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595751950682</updated>
-      <workItem from="1595751958239" duration="1162000" />
+      <workItem from="1595751958239" duration="28736000" />
+      <workItem from="1595928449868" duration="58000" />
+      <workItem from="1595929209783" duration="5723000" />
     </task>
     <task id="LOCAL-00001" summary="changed to spring boot">
       <created>1595752359282</created>
@@ -100,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595752828098</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added h2 database">
+      <created>1595753156216</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595753156216</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,41 +256,86 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="changed to spring boot" />
     <MESSAGE value="fixed guava version" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed guava version" />
+    <MESSAGE value="added h2 database" />
+    <option name="LAST_COMMIT_MESSAGE" value="added h2 database" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="205" y="0" key="CommitChangelistDialog2" timestamp="1595752826864">
+    <state x="275" y="23" key="#Assign_Data_Sources" timestamp="1595848018943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="205" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595752826864" />
+    <state x="275" y="23" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1595848018943" />
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595848112579">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595848112579" />
+    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1595935672456">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1595935672456" />
+    <state x="297" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1595927239929">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="297" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1595927239929" />
+    <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1595852759723">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1595852759723" />
+    <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595934575731">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1595934575731" />
+    <state x="205" y="0" key="CommitChangelistDialog2" timestamp="1595753154943">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="205" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595753154943" />
     <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1595752188144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595752188144" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595752059189">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595937345353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595752059189" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595752059189">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595937345353" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595937345353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595752059189" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595752059189">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595937345353" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595937345353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595752059189" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595752059189">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595937345353" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595937345353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595752059189" />
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1595752831300">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595937345353" />
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom" timestamp="1595937345353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595752831300" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1595751962697">
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595937345353" />
+    <state width="1323" height="179" key="GridCell.Tab.1.center" timestamp="1595937345353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1595751962697" />
+    <state width="1323" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595937345353" />
+    <state width="1323" height="179" key="GridCell.Tab.1.left" timestamp="1595937345353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595937345353" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right" timestamp="1595937345353">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595937345353" />
+    <state x="213" y="20" key="Maven.ArtifactSearchDialog" timestamp="1595767013792">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="20" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1595767013792" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1595753159581">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595753159581" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1595929332249">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1595929332249" />
     <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595752136599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

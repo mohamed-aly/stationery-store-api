@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.Setter;
 import stationery.store.bundle.abstractAndInterfaces.BaseEntity;
 import stationery.store.bundle.address.Address;
-import stationery.store.bundle.customer.Customer;
 import stationery.store.bundle.order.Order;
+import stationery.store.bundle.customer.Customer;
 import stationery.store.bundle.shipper.Shipper;
 
 import javax.persistence.*;

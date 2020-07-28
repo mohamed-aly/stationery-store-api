@@ -1,6 +1,5 @@
 package stationery.store.bundle.customer;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
@@ -20,31 +19,11 @@ import java.util.Set;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Customer extends User {
 
-    @Transient
-    private CustomerType customerType;
-
-    @JsonIgnore
-    private int type;
-
     @OneToMany(mappedBy = "customer")
     @JsonManagedReference(value = "orderDetails-customer")
-    private Set<OrderDetails> ordersDetails;
+    private Set<OrderDetails> orders;
 
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "customer")
     @JsonManagedReference("customer_cart")
     private Cart cart;
-
-    @PostLoad
-    void fillTransient() {
-        if (this.type > 0) {
-            this.customerType = CustomerType.of(type);
-        }
-    }
-
-    @PrePersist
-    void fillPersistent() {
-        if (customerType != null) {
-            this.type = customerType.getType();
-        }
-    }
 }

@@ -1,9 +1,13 @@
 package stationery.store.bundle.user;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import stationery.store.bundle.abstractAndInterfaces.CrudService;
+import stationery.store.bundle.customer.Customer;
+import stationery.store.bundle.customer.CustomerDAO;
 import stationery.store.exceptions.EmailExistsException;
 
 import java.util.HashSet;
@@ -13,10 +17,9 @@ import java.util.Set;
 @Slf4j
 @Service
 @Transactional
-public class UserServiceImpl<T extends User> implements UserService<T> {
+public class UserServiceImpl implements UserService {
 
-    private final UserDAO<T> userDAO;
-
+    private UserDAO userDAO;
     private PasswordEncoder passwordEncoder;
 
     public UserServiceImpl(UserDAO userDAO, PasswordEncoder passwordEncoder) {
@@ -24,14 +27,18 @@ public class UserServiceImpl<T extends User> implements UserService<T> {
         this.passwordEncoder = passwordEncoder;
     }
 
-
     @Override
-    public Set<T> findAll() {
+    public Set<User> findAll() {
         log.debug("I'm in the service");
 
-        Set<T> userSet = new HashSet<>();
+        Set<User> userSet = new HashSet<>();
         userDAO.findAll().iterator().forEachRemaining(userSet::add);
         return userSet;
+    }
+
+    @Override
+    public Set<User> findByUserType(UserType userType) {
+        return userDAO.findByType(userType.getType());
     }
 
 
@@ -41,24 +48,29 @@ public class UserServiceImpl<T extends User> implements UserService<T> {
     }
 
 
-
     private boolean emailExist(final String email) {
-        final T user = userDAO.findByEmail(email);
+        final User user = userDAO.findByEmail(email);
         return user != null;
     }
 
     @Override
-    public T save(final T insertedUser) throws EmailExistsException {
-        if (emailExist(insertedUser.getEmail())) {
-            throw new EmailExistsException("There is an account with that email address: " + insertedUser.getEmail());
+    public User save(final User user, UserType userType) throws EmailExistsException {
+        if (emailExist(user.getEmail())) {
+            throw new EmailExistsException("There is an account with that email address: " + user.getEmail());
         }
 
-        insertedUser.setPassword(passwordEncoder.encode(insertedUser.getPassword()));
-        return userDAO.save(insertedUser);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setUserType(userType);
+        return userDAO.save(user);
     }
 
     @Override
-    public T updateExistingUser(T user) throws EmailExistsException {
+    public User save(User object) throws EmailExistsException {
+        return userDAO.save(object);
+    }
+
+    @Override
+    public User updateExistingUser(User user) throws EmailExistsException {
         if (!emailExist(user.getEmail())) {
             throw new EmailExistsException("There is no account with that email address: " + user.getEmail());
         }
@@ -66,19 +78,20 @@ public class UserServiceImpl<T extends User> implements UserService<T> {
         return user;
     }
 
+
     @Override
-    public T findById(Long l) {
+    public User findById(Long l) {
         return null;
     }
 
 
     @Override
-    public void delete(T object) {
+    public void delete(User object) {
 
     }
 
     @Override
-    public T getUserByEmail(String email) {
+    public User getUserByEmail(String email) {
         return userDAO.findByEmail(email);
     }
 

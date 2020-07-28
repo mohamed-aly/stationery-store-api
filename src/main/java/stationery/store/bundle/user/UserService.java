@@ -1,17 +1,19 @@
 package stationery.store.bundle.user;
 
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.security.core.Authentication;
 import stationery.store.bundle.abstractAndInterfaces.CrudService;
 import stationery.store.exceptions.EmailExistsException;
 
 import java.util.Set;
 
-public interface UserService<T extends User> extends CrudService<T, Long> {
+public interface UserService extends CrudService<User, Long> {
 
-    T updateExistingUser(T user) throws EmailExistsException;
+    User updateExistingUser(User user) throws EmailExistsException;
 
-    T getUserByEmail(String email);
+    User save(final User user, UserType userType) throws EmailExistsException;
+
+    User getUserByEmail(String email);
+
+    Set<User> findByUserType(UserType userType);
 
 }

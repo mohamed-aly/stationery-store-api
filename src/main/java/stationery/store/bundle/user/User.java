@@ -1,6 +1,6 @@
 package stationery.store.bundle.user;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
@@ -11,7 +11,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import stationery.store.bundle.abstractAndInterfaces.BaseEntity;
 import stationery.store.bundle.address.Address;
-import stationery.store.bundle.userType.UserType;
 import stationery.store.validation.PasswordMatches;
 import stationery.store.validation.ValidPassword;
 
@@ -21,7 +20,6 @@ import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 
@@ -32,22 +30,17 @@ import java.util.Set;
 @Table(name = "user")
 @Inheritance(strategy = InheritanceType.JOINED)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-@PasswordMatches
 public class User extends BaseEntity implements UserDetails {
 
-    @Column(name = "first_name")
     @NotEmpty(message = "first name is required.")
     private String firstName;
 
-    @Column(name = "last_name")
     @NotEmpty(message = "Last name is required.")
     private String lastName;
 
-    @Column(name = "phone_number1")
     @NotEmpty(message = "Phone number is required.")
     private String phoneNumber1;
 
-    @Column(name = "phone_number2")
     private String phoneNumber2;
 
     @Column(name = "email", unique = true)
@@ -55,7 +48,7 @@ public class User extends BaseEntity implements UserDetails {
     @Email
     private String email;
 
-    @Column(name = "password")
+
     @NotEmpty(message = "Password is required.")
     @ValidPassword
     private String password;
@@ -65,44 +58,69 @@ public class User extends BaseEntity implements UserDetails {
 
     private LocalDate created = LocalDate.now();
 
-    private int isEnabled;
+    @JsonIgnore
+    private int isEnabled = 1;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference(value = "address-user")
     private Set<Address> addresses;
 
-    @ManyToOne
-    @JoinColumn(name = "user_type_id")
-    @JsonBackReference(value="userType-user")
+    //user type implementation block
+    @Transient
     private UserType userType;
 
+    @JsonIgnore
+    private int type;
+
+    @PostLoad
+    void fillTransient() {
+        if (type > 0) {
+            this.userType = UserType.of(type);
+        }
+    }
+
+    @PrePersist
+    void fillPersistent() {
+        if (userType != null) {
+            this.type = userType.getType();
+        }
+    }
+
+    //end
+
+    @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.asList(new SimpleGrantedAuthority(this.getUserType().getType().toUpperCase()));
+        return Arrays.asList(new SimpleGrantedAuthority(this.getUserType().toString().toUpperCase()));
     }
 
 
+    @JsonIgnore
     @Override
     public String getUsername() {
         return this.email;
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonExpired() {
         return true;
     }
 
     @Override
+    @JsonIgnore
     public boolean isAccountNonLocked() {
         return true;
     }
 
     @Override
+    @JsonIgnore
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
     @Override
+    @JsonIgnore
     public boolean isEnabled() {
         if (this.isEnabled == 1) {
             return true;

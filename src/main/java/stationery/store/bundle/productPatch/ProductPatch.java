@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 import stationery.store.bundle.abstractAndInterfaces.BaseEntity;
-import stationery.store.bundle.admin.Admin;
 import stationery.store.bundle.product.Product;
+import stationery.store.bundle.admin.Admin;
 
 import javax.persistence.*;
 import java.sql.Date;

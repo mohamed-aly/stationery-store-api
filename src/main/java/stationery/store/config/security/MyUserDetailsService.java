@@ -11,11 +11,11 @@ import javax.transaction.Transactional;
 
 @Service
 @Transactional
-public class LssUserDetailsService implements UserDetailsService {
+public class MyUserDetailsService implements UserDetailsService {
 
     private UserDAO userDAO;
 
-    public LssUserDetailsService(UserDAO userDAO) {
+    public MyUserDetailsService(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
 

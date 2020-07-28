@@ -3,11 +3,16 @@ package stationery.store.bundle.user;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserDAO<T extends User> extends CrudRepository<T, Long> {
+import java.util.Set;
 
-    @Query("Select u from #{#entityName} u where u.email=:email")
-    T findByEmail(String email);
+@Repository
+public interface UserDAO extends CrudRepository<User, Long> {
+
+    User findByEmail(String email);
+
+    Set<User> findByType(int type);
 
 
 

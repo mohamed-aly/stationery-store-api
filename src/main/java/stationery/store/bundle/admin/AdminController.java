@@ -10,16 +10,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/admin")
 public class AdminController {
 
-    private AdminService adminService;
-
-    public AdminController(AdminService adminService) {
-        this.adminService = adminService;
-    }
-
-    @PostMapping("/save")
-    Admin newAdmin(@RequestBody Admin admin) {
-        return adminService.addNewAdmin(admin);
-    }
 
 }
 	
