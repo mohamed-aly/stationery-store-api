@@ -28,7 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final String[] PUBLIC_ENDPOINTS = {
             "/api/auth/**",
-            "/user/**"
+            "/user/**",
+            "/h2-console/**"
     };
 
     private UserDetailsService userDetailsService;

@@ -18,12 +18,15 @@ public class AuthController {
 
     private TokenUtil tokenUtil;
 
+    private JwtDao jwtDao;
+
     private MyUserDetailsService userService;
 
     private AuthenticationManager authenticationManager;
 
-    public AuthController(TokenUtil tokenUtil, MyUserDetailsService userService, AuthenticationManager authenticationManager) {
+    public AuthController(TokenUtil tokenUtil, JwtDao jwtDao, MyUserDetailsService userService, AuthenticationManager authenticationManager) {
         this.tokenUtil = tokenUtil;
+        this.jwtDao = jwtDao;
         this.userService = userService;
         this.authenticationManager = authenticationManager;
     }
@@ -40,6 +43,6 @@ public class AuthController {
         UserDetails userDetails = userService.loadUserByUsername(signInRequest.getUsername());
         String token = tokenUtil.generateToken(userDetails);
         JwtResponse response = new JwtResponse(token);
-        return response;
+        return jwtDao.save(response);
     }
 }

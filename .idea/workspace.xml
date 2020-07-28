@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b94eca62-b985-45b9-b53a-4a9529e53958" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/SignInRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/TokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/JwtDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/MethodSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/JwtResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stationery-store-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/stationery-store-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/config/security/MethodSecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-stationery.store.StationeryStoreApiApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-stationery.store.StationeryStoreApiApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/stationery.store.StationeryStoreApiApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/stationery.store.StationeryStoreApiApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -129,7 +117,7 @@
       <updated>1595751950682</updated>
       <workItem from="1595751958239" duration="28736000" />
       <workItem from="1595928449868" duration="58000" />
-      <workItem from="1595929209783" duration="8719000" />
+      <workItem from="1595929209783" duration="9714000" />
     </task>
     <task id="LOCAL-00001" summary="changed to spring boot">
       <created>1595752359282</created>
@@ -159,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595938002128</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added jwt security">
+      <created>1595941111538</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595941111538</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +166,8 @@
     <MESSAGE value="fixed guava version" />
     <MESSAGE value="added h2 database" />
     <MESSAGE value="implemented different users classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented different users classes" />
+    <MESSAGE value="added jwt security" />
+    <option name="LAST_COMMIT_MESSAGE" value="added jwt security" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#Assign_Data_Sources" timestamp="1595848018943">
@@ -198,54 +194,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1595934575731" />
-    <state x="205" y="0" key="CommitChangelistDialog2" timestamp="1595937992138">
+    <state x="205" y="0" key="CommitChangelistDialog2" timestamp="1595941109095">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="205" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595937992138" />
+    <state x="205" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595941109095" />
     <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1595752188144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595752188144" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595941003731">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1595942072374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595941003731" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595941003731">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595942072374" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1595942072374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595941003731" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595941003731">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595942072374" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1595942072374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595941003731" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595941003731">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595942072374" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1595942072374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595941003731" />
-    <state width="1323" height="179" key="GridCell.Tab.1.bottom" timestamp="1595941003731">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595942072374" />
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom" timestamp="1595942072374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595941003731" />
-    <state width="1323" height="179" key="GridCell.Tab.1.center" timestamp="1595941003731">
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595942072374" />
+    <state width="1323" height="179" key="GridCell.Tab.1.center" timestamp="1595942072374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595941003731" />
-    <state width="1323" height="179" key="GridCell.Tab.1.left" timestamp="1595941003731">
+    <state width="1323" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595942072374" />
+    <state width="1323" height="179" key="GridCell.Tab.1.left" timestamp="1595942072374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595941003731" />
-    <state width="1323" height="179" key="GridCell.Tab.1.right" timestamp="1595941003731">
+    <state width="1323" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595942072374" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right" timestamp="1595942072374">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595941003731" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595942072374" />
     <state x="213" y="20" key="Maven.ArtifactSearchDialog" timestamp="1595767013792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="20" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1595767013792" />
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1595938004232">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1595941113303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595938004232" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595941113303" />
     <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1595929332249">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
