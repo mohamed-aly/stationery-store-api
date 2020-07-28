@@ -5,15 +5,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import stationery.store.config.jwt.AuthFilter;
 
 import java.security.SecureRandom;
 
@@ -22,6 +26,11 @@ import java.security.SecureRandom;
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    private final String[] PUBLIC_ENDPOINTS = {
+            "/api/auth/**",
+            "/user/**"
+    };
+
     private UserDetailsService userDetailsService;
 
 
@@ -29,6 +38,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         this.userDetailsService = userDetailsService;
     }
 
+    @Bean
+    @Override
+    protected AuthenticationManager authenticationManager() throws Exception {
+        return super.authenticationManager();
+    }
+
+    @Bean
+    AuthFilter authFilter() {
+        return new AuthFilter();
+    }
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {// @formatter:off
@@ -39,11 +58,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {// @formatter:off
         http
                 .authorizeRequests()
-                .antMatchers("/product/**").authenticated()
-//                .antMatchers("/product/**").hasAuthority("user")
-                .antMatchers("/customer/**").permitAll()
+                .antMatchers(PUBLIC_ENDPOINTS).permitAll()
+                .anyRequest().authenticated()
 
                 .and()
+                .addFilterBefore(authFilter(), UsernamePasswordAuthenticationFilter.class)
                 .formLogin().permitAll()
 
                 .and()
@@ -51,13 +70,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and()
                 .rememberMe()
-                .tokenValiditySeconds(7)
+                .tokenValiditySeconds(7000)
                 .key("lssAppKey")
                 .rememberMeCookieName("rody")
 
 
                 .and()
-                .csrf().disable()
+                .cors().and().csrf().disable()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
                 .httpBasic()
 
                 .and().headers().frameOptions().sameOrigin();
