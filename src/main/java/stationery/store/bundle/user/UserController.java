@@ -1,5 +1,7 @@
 package stationery.store.bundle.user;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,6 +35,12 @@ public class UserController {
                 .collect(groupingBy(User::getUserType));
 
         return usersPerType;
+    }
+
+    @GetMapping("/current")
+    public UserDetails getCurrentUser(Authentication authentication) {
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        return userDetails;
     }
 
 

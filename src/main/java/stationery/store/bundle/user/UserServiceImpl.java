@@ -1,13 +1,9 @@
 package stationery.store.bundle.user;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationery.store.bundle.abstractAndInterfaces.CrudService;
-import stationery.store.bundle.customer.Customer;
-import stationery.store.bundle.customer.CustomerDAO;
 import stationery.store.exceptions.EmailExistsException;
 
 import java.util.HashSet;

@@ -11,7 +11,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import stationery.store.bundle.abstractAndInterfaces.BaseEntity;
 import stationery.store.bundle.address.Address;
-import stationery.store.validation.PasswordMatches;
 import stationery.store.validation.ValidPassword;
 
 import javax.persistence.*;
@@ -60,6 +59,8 @@ public class User extends BaseEntity implements UserDetails {
 
     @JsonIgnore
     private int isEnabled = 1;
+
+    private String token;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference(value = "address-user")

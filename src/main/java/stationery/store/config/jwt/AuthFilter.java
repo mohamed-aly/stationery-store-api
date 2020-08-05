@@ -32,7 +32,6 @@ public class AuthFilter extends OncePerRequestFilter {
     @Autowired
     private MyUserDetailsService userDetailsService;
 
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
@@ -42,7 +41,7 @@ public class AuthFilter extends OncePerRequestFilter {
         if (header != null && securityContext.getAuthentication() == null) {
             String token = header.substring("Bearer ".length());
             String username = tokenUtil.getUserNameFromToken(token);
-            if(username != null) {
+            if (username != null) {
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
                 if (tokenUtil.isTokenValid(token, userDetails)) {
                     UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
