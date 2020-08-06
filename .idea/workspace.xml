@@ -3,17 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="b94eca62-b985-45b9-b53a-4a9529e53958" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bootstrap/BootStrapMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bootstrap/BootStrapMySQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/abstractAndInterfaces/CrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/abstractAndInterfaces/CrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/address/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/address/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/customer/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/JwtDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/JwtResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bootstrap/BootStrapMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bootstrap/BootStrapMySQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/abstractAndInterfaces/CrudService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/abstractAndInterfaces/CrudService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/address/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/address/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/customer/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/customer/CustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +134,7 @@
       <workItem from="1595751958239" duration="28736000" />
       <workItem from="1595928449868" duration="58000" />
       <workItem from="1595929209783" duration="13122000" />
-      <workItem from="1596545289359" duration="6112000" />
+      <workItem from="1596545289359" duration="17996000" />
     </task>
     <task id="LOCAL-00001" summary="changed to spring boot">
       <created>1595752359282</created>
@@ -170,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595942252709</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added the current user endpoint">
+      <created>1596605076319</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596605076319</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +199,8 @@
     <MESSAGE value="implemented different users classes" />
     <MESSAGE value="added jwt security" />
     <MESSAGE value="added jwt database storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="added jwt database storage" />
+    <MESSAGE value="added the current user endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the current user endpoint" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#Assign_Data_Sources" timestamp="1595848018943">
@@ -195,10 +211,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595848112579" />
-    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1596603089817">
+    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1596702151330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596603089817" />
+    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596702151330" />
     <state x="297" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1595927239929">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -211,54 +227,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1595934575731" />
-    <state x="205" y="0" key="CommitChangelistDialog2" timestamp="1595942251365">
+    <state x="205" y="0" key="CommitChangelistDialog2" timestamp="1596605073926">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="205" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595942251365" />
+    <state x="205" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596605073926" />
     <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1595752188144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595752188144" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1596604832013">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1596699695004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596604832013" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1596604832012">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596699695004" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1596699695004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596604832012" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1596604832012">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596699695004" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1596699695004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596604832012" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1596604832012">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596699695004" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1596699695004">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596604832012" />
-    <state width="1323" height="179" key="GridCell.Tab.1.bottom" timestamp="1596604832013">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596699695004" />
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom" timestamp="1596699695005">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596604832013" />
-    <state width="1323" height="179" key="GridCell.Tab.1.center" timestamp="1596604832013">
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596699695005" />
+    <state width="1323" height="179" key="GridCell.Tab.1.center" timestamp="1596699695005">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596604832013" />
-    <state width="1323" height="179" key="GridCell.Tab.1.left" timestamp="1596604832013">
+    <state width="1323" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596699695005" />
+    <state width="1323" height="179" key="GridCell.Tab.1.left" timestamp="1596699695005">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596604832013" />
-    <state width="1323" height="179" key="GridCell.Tab.1.right" timestamp="1596604832013">
+    <state width="1323" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596699695005" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right" timestamp="1596699695005">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596604832013" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596699695005" />
     <state x="213" y="20" key="Maven.ArtifactSearchDialog" timestamp="1595767013792">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="20" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1595767013792" />
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1595942254568">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1596605078466">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595942254568" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596605078466" />
     <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1596545421407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

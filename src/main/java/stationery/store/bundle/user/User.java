@@ -1,6 +1,7 @@
 package stationery.store.bundle.user;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
@@ -29,6 +30,9 @@ import java.util.Set;
 @Table(name = "user")
 @Inheritance(strategy = InheritanceType.JOINED)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
+@JsonIgnoreProperties(value = {"isEnabled", "type", "created", "authorities", "username",
+        "enabled", "accountNonLocked", "credentialsNonExpired", "accountNonExpired", "genderType", "userType"},
+        allowSetters = true)
 public class User extends BaseEntity implements UserDetails {
 
     @NotEmpty(message = "first name is required.")
@@ -41,6 +45,9 @@ public class User extends BaseEntity implements UserDetails {
     private String phoneNumber1;
 
     private String phoneNumber2;
+
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private LocalDate dateOfBirth;
 
     @Column(name = "email", unique = true)
     @NotEmpty(message = "Email is required.")
@@ -55,73 +62,85 @@ public class User extends BaseEntity implements UserDetails {
     @Transient
     private String passwordConfirmation;
 
-    private LocalDate created = LocalDate.now();
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private LocalDate created;
 
-    @JsonIgnore
     private int isEnabled = 1;
-
-    private String token;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     @JsonManagedReference(value = "address-user")
     private Set<Address> addresses;
 
-    //user type implementation block
+    private int typeRef;
+
     @Transient
     private UserType userType;
 
-    @JsonIgnore
-    private int type;
+    private int genderRef;
+
+    @Transient
+    private String gender = "male";
+
+    @Transient
+    private String token;
 
     @PostLoad
     void fillTransient() {
-        if (type > 0) {
-            this.userType = UserType.of(type);
+        if (typeRef > 0) {
+            this.userType = UserType.of(typeRef);
+        }
+
+        if(genderRef ==1){
+            gender="male";
+        }else if(genderRef ==2){
+            gender="female";
         }
     }
 
     @PrePersist
     void fillPersistent() {
         if (userType != null) {
-            this.type = userType.getType();
+            this.typeRef = userType.getType();
+        }
+
+        if(gender.toLowerCase().equals("male")){
+            this.genderRef =1;
+        }else if(gender.toLowerCase().equals("female")){
+            this.genderRef =2;
         }
     }
 
-    //end
 
-    @JsonIgnore
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(new SimpleGrantedAuthority(this.getUserType().toString().toUpperCase()));
     }
 
 
-    @JsonIgnore
+
     @Override
     public String getUsername() {
         return this.email;
     }
 
     @Override
-    @JsonIgnore
     public boolean isAccountNonExpired() {
         return true;
     }
 
     @Override
-    @JsonIgnore
+
     public boolean isAccountNonLocked() {
         return true;
     }
 
     @Override
-    @JsonIgnore
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
     @Override
-    @JsonIgnore
     public boolean isEnabled() {
         if (this.isEnabled == 1) {
             return true;

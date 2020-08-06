@@ -16,6 +16,8 @@ import javax.persistence.*;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Address extends BaseEntity {
 
+    private int isDefault;
+
     @Column(name = "building")
     private int buildingNumber;
 

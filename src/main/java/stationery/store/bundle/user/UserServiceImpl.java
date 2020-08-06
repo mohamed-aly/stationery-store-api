@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import stationery.store.config.jwt.TokenUtil;
 import stationery.store.exceptions.EmailExistsException;
 
 import java.util.HashSet;
@@ -17,10 +18,12 @@ public class UserServiceImpl implements UserService {
 
     private UserDAO userDAO;
     private PasswordEncoder passwordEncoder;
+    private TokenUtil tokenUtil;
 
-    public UserServiceImpl(UserDAO userDAO, PasswordEncoder passwordEncoder) {
+    public UserServiceImpl(UserDAO userDAO, PasswordEncoder passwordEncoder, TokenUtil tokenUtil) {
         this.userDAO = userDAO;
         this.passwordEncoder = passwordEncoder;
+        this.tokenUtil = tokenUtil;
     }
 
     @Override
@@ -34,7 +37,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Set<User> findByUserType(UserType userType) {
-        return userDAO.findByType(userType.getType());
+        return userDAO.findByTypeRef(userType.getType());
     }
 
 
@@ -44,14 +47,9 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    private boolean emailExist(final String email) {
-        final User user = userDAO.findByEmail(email);
-        return user != null;
-    }
-
     @Override
-    public User save(final User user, UserType userType) throws EmailExistsException {
-        if (emailExist(user.getEmail())) {
+    public User saveWithEncryption(final User user, UserType userType) throws EmailExistsException {
+        if (getUserByEmail(user.getEmail())!=null) {
             throw new EmailExistsException("There is an account with that email address: " + user.getEmail());
         }
 
@@ -66,18 +64,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User updateExistingUser(User user) throws EmailExistsException {
-        if (!emailExist(user.getEmail())) {
-            throw new EmailExistsException("There is no account with that email address: " + user.getEmail());
-        }
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return user;
+    public User update(User oldUser, User newUser) throws EmailExistsException {
+        oldUser.setFirstName(newUser.getFirstName());
+        oldUser.setLastName(newUser.getLastName());
+        oldUser.setEmail(newUser.getEmail());
+        oldUser.setPhoneNumber1(newUser.getPhoneNumber1());
+        oldUser.setPhoneNumber2(newUser.getPhoneNumber2());
+        oldUser.setGender(newUser.getGender());
+        oldUser.setDateOfBirth(newUser.getDateOfBirth());
+        return userDAO.save(oldUser);
     }
 
 
     @Override
     public User findById(Long l) {
-        return null;
+        return userDAO.findById(l).orElse(null);
     }
 
 

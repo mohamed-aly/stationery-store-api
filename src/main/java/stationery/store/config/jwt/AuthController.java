@@ -21,28 +21,13 @@ public class AuthController {
 
     private MyUserDetailsService userService;
 
-    private UserDAO userDAO;
-
     private AuthenticationManager authenticationManager;
 
-    public AuthController(TokenUtil tokenUtil, MyUserDetailsService userService, UserDAO userDAO, AuthenticationManager authenticationManager) {
+    public AuthController(TokenUtil tokenUtil, MyUserDetailsService userService, AuthenticationManager authenticationManager) {
         this.tokenUtil = tokenUtil;
         this.userService = userService;
-        this.userDAO = userDAO;
         this.authenticationManager = authenticationManager;
     }
 
-    @PostMapping(value = {"", "/"})
-    public String signIn(@RequestBody SignInRequest signInRequest) {
 
-        final Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(signInRequest.getUsername(), signInRequest.getPassword())
-        );
-
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-
-        User user = (User) userService.loadUserByUsername(signInRequest.getUsername());
-        String token = tokenUtil.generateToken(user);
-        return token;
-    }
 }

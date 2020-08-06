@@ -12,6 +12,8 @@ public interface CrudService<T, ID> {
 
     T save(T object) throws EmailExistsException;
 
+    T update(T oldObject, T newObject) throws EmailExistsException;
+
     void delete(T object);
 
     void deleteById(ID id);

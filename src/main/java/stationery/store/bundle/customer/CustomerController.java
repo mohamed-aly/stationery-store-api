@@ -24,29 +24,6 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/all")
-    public Set<User> getCustomers(){
-        return userService.findByUserType(UserType.CUSTOMER);
-    }
-
-    @PostMapping("/signUp")
-    public User signUp(@RequestBody User user) throws EmailExistsException {
-        return userService.save(user, UserType.CUSTOMER);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public void deleteCustomer(@PathVariable Long id){
-        userService.deleteById(id);
-    }
-
-    @PatchMapping("/update")
-    public User updateCustomer(@RequestBody User user) throws EmailExistsException {
-        User updatedCustomer = userService.updateExistingUser(user);
-        updatedCustomer.setPassword(null);
-        return updatedCustomer;
-    }
-
-
 }
 	
 

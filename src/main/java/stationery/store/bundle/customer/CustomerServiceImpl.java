@@ -4,8 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationery.store.bundle.user.User;
-import stationery.store.bundle.user.UserDAO;
 import stationery.store.bundle.user.UserType;
 import stationery.store.exceptions.EmailExistsException;
 

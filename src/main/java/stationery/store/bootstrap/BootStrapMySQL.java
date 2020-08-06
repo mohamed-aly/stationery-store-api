@@ -8,7 +8,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import stationery.store.bundle.user.User;
-import stationery.store.bundle.user.UserDAO;
 import stationery.store.bundle.user.UserService;
 import stationery.store.bundle.user.UserType;
 import stationery.store.bundle.admin.Admin;
@@ -19,11 +18,9 @@ import stationery.store.bundle.admin.Admin;
 public class BootStrapMySQL implements ApplicationListener<ContextRefreshedEvent> {
 
     private UserService userService;
-    private PasswordEncoder passwordEncoder;
 
-    public BootStrapMySQL(UserService userService, PasswordEncoder passwordEncoder) {
+    public BootStrapMySQL(UserService userService) {
         this.userService = userService;
-        this.passwordEncoder = passwordEncoder;
     }
 
     @SneakyThrows
@@ -41,7 +38,7 @@ public class BootStrapMySQL implements ApplicationListener<ContextRefreshedEvent
             user.setPhoneNumber1("01285030106");
             user.setEmail("test@test.com");
             user.setEnabled(true);
-            userService.save(user, UserType.ADMIN);
+            userService.saveWithEncryption(user, UserType.ADMIN);
         }
     }
 
