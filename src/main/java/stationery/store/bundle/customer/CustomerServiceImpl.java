@@ -57,6 +57,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public Customer update(Customer oldObject, Customer newObject) throws EmailExistsException {
+        return null;
+    }
+
+    @Override
     public Customer updateExistingUser(Customer customer) throws EmailExistsException {
         if (!emailExist(customer.getEmail())) {
             throw new EmailExistsException("There is no account with that email address: " + customer.getEmail());

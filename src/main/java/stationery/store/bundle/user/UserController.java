@@ -7,6 +7,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import stationery.store.config.jwt.JwtResponse;
 import stationery.store.config.jwt.SignInRequest;
 import stationery.store.config.jwt.TokenUtil;
 import stationery.store.exceptions.EmailExistsException;
@@ -49,7 +50,7 @@ public class UserController {
     }
 
     @PostMapping(value = {"/signIn", "/login"})
-    public String signIn(@RequestBody SignInRequest signInRequest) {
+    public JwtResponse signIn(@RequestBody SignInRequest signInRequest) {
 
         final Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(signInRequest.getUsername(), signInRequest.getPassword())
@@ -59,7 +60,8 @@ public class UserController {
 
         User user = userService.getUserByEmail(signInRequest.getUsername());
         String token = tokenUtil.generateToken(user);
-        return token;
+        JwtResponse response = new JwtResponse(token);
+        return response;
     }
 
     @PostMapping("/{type}/signUp")

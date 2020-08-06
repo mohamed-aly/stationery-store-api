@@ -27,9 +27,16 @@ import java.security.SecureRandom;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final String[] PUBLIC_ENDPOINTS = {
-            "/api/auth/**",
-            "/user/**",
+            "/user/signIn",
+            "/user/login",
+            "/user/{type}/signUp",
             "/h2-console/**"
+    };
+
+    private final String[] ADMIN_ENDPOINTS = {
+            "/user/all",
+            "/user/{type}",
+            "/delete/{id}"
     };
 
     private UserDetailsService userDetailsService;
@@ -60,6 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers(PUBLIC_ENDPOINTS).permitAll()
+                .antMatchers(ADMIN_ENDPOINTS).hasAuthority("ADMIN")
                 .anyRequest().authenticated()
 
                 .and()

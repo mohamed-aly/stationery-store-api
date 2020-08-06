@@ -17,10 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * @author Khalid Elshafie <abolkog@gmail.com>
- * @Created 10/10/2018 10:37 PM.
- */
 public class AuthFilter extends OncePerRequestFilter {
 
     @Value("${auth.header}")
@@ -39,7 +35,7 @@ public class AuthFilter extends OncePerRequestFilter {
         final SecurityContext securityContext = SecurityContextHolder.getContext();
 
         if (header != null && securityContext.getAuthentication() == null) {
-            String token = header.substring("Bearer ".length());
+            String token = header;
             String username = tokenUtil.getUserNameFromToken(token);
             if (username != null) {
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
