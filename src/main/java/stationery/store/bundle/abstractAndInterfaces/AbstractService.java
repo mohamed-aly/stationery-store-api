@@ -4,7 +4,7 @@ import stationery.store.exceptions.EmailExistsException;
 
 import java.util.Set;
 
-public interface CrudService<T, ID> {
+public interface AbstractService<T, ID> {
 
     Set<T> findAll();
 

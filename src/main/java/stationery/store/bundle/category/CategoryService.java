@@ -1,14 +1,17 @@
 package stationery.store.bundle.category;
 
 
-public interface CategoryService {
+import stationery.store.bundle.abstractAndInterfaces.AbstractService;
+import stationery.store.bundle.product.Product;
 
-    //create
+import java.util.List;
+import java.util.Set;
 
-    //read
+public interface CategoryService extends AbstractService<Category, Long> {
+    Set<Category> findMainCategories();
 
-    //Update
+    Set<Category> findSubCategories(long categoryId, int page, int pageSize, String sortBy);
 
-    //Delete
+    List<Category> findAll(Integer page, Integer pageSize, String sortBy);
 
 }

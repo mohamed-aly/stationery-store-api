@@ -3,15 +3,19 @@ package stationery.store.bundle.category;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import stationery.store.bundle.abstractAndInterfaces.BaseEntity;
 import stationery.store.bundle.product.Product;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 import java.util.Set;
 
+@NoArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -19,7 +23,7 @@ import java.util.Set;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Category extends BaseEntity {
 
-
+    @NotEmpty
     @Column(name = "name")
     private String name;
 
@@ -43,5 +47,7 @@ public class Category extends BaseEntity {
     @JsonManagedReference(value="category-product")
     private List<Product> products;
 
-
+    public Category(long id) {
+        super(id);
+    }
 }

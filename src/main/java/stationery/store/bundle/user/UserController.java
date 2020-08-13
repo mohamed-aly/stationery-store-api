@@ -12,6 +12,7 @@ import stationery.store.config.jwt.SignInRequest;
 import stationery.store.config.jwt.TokenUtil;
 import stationery.store.exceptions.EmailExistsException;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -68,6 +69,7 @@ public class UserController {
     public User signUp(@RequestBody User user, @PathVariable String type) throws EmailExistsException {
         User savedUser = userService.saveWithEncryption(user, UserType.valueOf(type.toUpperCase()));
         savedUser.setToken(tokenUtil.generateToken(savedUser));
+        savedUser.setCreated(LocalDate.now());
         return savedUser;
     }
 
@@ -81,6 +83,7 @@ public class UserController {
 
         User user = userService.update(oldUser, newUser);
         user.setToken(tokenUtil.generateToken(user));
+        user.setLastUpdated(LocalDate.now());
         return user;
     }
 

@@ -30,7 +30,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/user/signIn",
             "/user/login",
             "/user/{type}/signUp",
-            "/h2-console/**"
+            "/h2-console/**",
+            "/product/**",
+            "/category/**"
     };
 
     private final String[] ADMIN_ENDPOINTS = {

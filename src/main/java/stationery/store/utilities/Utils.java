@@ -1,5 +1,9 @@
 package stationery.store.utilities;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -41,6 +45,11 @@ public class Utils {
         //Rewrite the sql codes
         Path writePath = Paths.get(path);
         Files.write(writePath, lines, UTF_8);
+    }
+
+    public static Pageable pageable(Integer page, Integer pageSize, String sortBy){
+        Pageable pageable = PageRequest.of(page, pageSize, Sort.by(sortBy).ascending());
+        return pageable;
     }
 
 

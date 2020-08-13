@@ -1,6 +1,7 @@
 package stationery.store.bundle.product;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
@@ -17,34 +18,39 @@ import stationery.store.bundle.productImage.ProductImage;
 import stationery.store.bundle.productPatch.ProductPatch;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "product")
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
+@NamedEntityGraph(name = "Product.imageUrl",
+        attributeNodes = @NamedAttributeNode("imageUrl")
+)
 public class Product extends BaseEntity {
 
+    private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
-    @JsonBackReference(value="category-product")
-    private Category category;
-
-    @Column(name = "name")
-    private String productName;
-
-    @Column(name = "description")
     private String description;
 
-    @Column(name = "min_stock")
     private int minStock;
 
     private int price;
 
     private int inStock;
+
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private LocalDate created;
+
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private LocalDate lastUpdated;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    @JsonBackReference(value="category-product")
+    private Category category;
 
     @OneToMany(mappedBy = "product")
     @JsonManagedReference(value = "orderItem-product")
@@ -75,8 +81,4 @@ public class Product extends BaseEntity {
     @JsonManagedReference(value="package-product")
     private Set<Package> packages;
 
-    public Product(Long id, int minStock) {
-        this.id=id;
-        this.minStock=minStock;
-    }
 }

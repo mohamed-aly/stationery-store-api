@@ -65,6 +65,9 @@ public class User extends BaseEntity implements UserDetails {
     @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate created;
 
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private LocalDate lastUpdated;
+
     private int isEnabled = 1;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
