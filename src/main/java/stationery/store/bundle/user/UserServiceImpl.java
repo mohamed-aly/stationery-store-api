@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import stationery.store.config.jwt.TokenUtil;
 import stationery.store.exceptions.EmailExistsException;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -34,6 +35,7 @@ public class UserServiceImpl implements UserService {
         userDAO.findAll().iterator().forEachRemaining(userSet::add);
         return userSet;
     }
+
 
     @Override
     public Set<User> findByUserType(UserType userType) {

@@ -18,6 +18,9 @@ import stationery.store.bundle.productImage.ProductImage;
 import stationery.store.bundle.productPatch.ProductPatch;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -31,12 +34,14 @@ import java.util.Set;
 )
 public class Product extends BaseEntity {
 
+    @NotEmpty
     private String name;
 
     private String description;
 
     private int minStock;
 
+    @Min(1)
     private int price;
 
     private int inStock;
@@ -67,7 +72,6 @@ public class Product extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
     @JsonManagedReference(value="productPatch-product")
     @OrderBy("dateIn")
-    @Where(clause = "quantity > 0")
     private Set<ProductPatch> patches;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)

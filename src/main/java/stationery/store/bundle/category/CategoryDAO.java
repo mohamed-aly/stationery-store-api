@@ -15,6 +15,4 @@ public interface CategoryDAO extends JpaRepository<Category, Long> {
 
     Page<Category> findByMainCategory(Category category, Pageable pageable);
 
-    Page<Category> findAll(Pageable pageable);
-
 }

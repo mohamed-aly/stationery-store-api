@@ -33,6 +33,10 @@ import java.util.Set;
 @JsonIgnoreProperties(value = {"isEnabled", "type", "created", "authorities", "username",
         "enabled", "accountNonLocked", "credentialsNonExpired", "accountNonExpired", "genderType", "userType"},
         allowSetters = true)
+@NamedEntityGraph(
+        name = "user.addresses",
+        attributeNodes = @NamedAttributeNode("addresses")
+)
 public class User extends BaseEntity implements UserDetails {
 
     @NotEmpty(message = "first name is required.")
@@ -87,16 +91,23 @@ public class User extends BaseEntity implements UserDetails {
     @Transient
     private String token;
 
+    public User(long id, String email, String password, int typeRef, int isEnabled) {
+        this.id=id;
+        this.email = email;
+        this.password = password;
+        this.typeRef=typeRef;
+    }
+
     @PostLoad
     void fillTransient() {
         if (typeRef > 0) {
             this.userType = UserType.of(typeRef);
         }
 
-        if(genderRef ==1){
-            gender="male";
-        }else if(genderRef ==2){
-            gender="female";
+        if (genderRef == 1) {
+            gender = "male";
+        } else if (genderRef == 2) {
+            gender = "female";
         }
     }
 
@@ -106,20 +117,18 @@ public class User extends BaseEntity implements UserDetails {
             this.typeRef = userType.getType();
         }
 
-        if(gender.toLowerCase().equals("male")){
-            this.genderRef =1;
-        }else if(gender.toLowerCase().equals("female")){
-            this.genderRef =2;
+        if (gender.toLowerCase().equals("male")) {
+            this.genderRef = 1;
+        } else if (gender.toLowerCase().equals("female")) {
+            this.genderRef = 2;
         }
     }
-
 
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(new SimpleGrantedAuthority(this.getUserType().toString().toUpperCase()));
     }
-
 
 
     @Override
@@ -152,9 +161,9 @@ public class User extends BaseEntity implements UserDetails {
     }
 
     public void setEnabled(boolean isEnabled) {
-        if(isEnabled)
-        this.isEnabled = 1;
-        else this.isEnabled=0;
+        if (isEnabled)
+            this.isEnabled = 1;
+        else this.isEnabled = 0;
     }
 
     @Override

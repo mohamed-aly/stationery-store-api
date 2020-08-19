@@ -12,6 +12,6 @@ public interface CategoryService extends AbstractService<Category, Long> {
 
     Set<Category> findSubCategories(long categoryId, int page, int pageSize, String sortBy);
 
-    List<Category> findAll(Integer page, Integer pageSize, String sortBy);
+    List<Category> findAll(int page, int pageSize);
 
 }

@@ -48,6 +48,11 @@ auth:
     DJmj7ayL3KoQ4fKDLICZxd0=
   header: Authorization
 
+default:
+  productImageUrl: default Product Image Url
+  categoryImageUrl: default Category Image Url
+
+
 #logging:
 #  level:
 #    org:

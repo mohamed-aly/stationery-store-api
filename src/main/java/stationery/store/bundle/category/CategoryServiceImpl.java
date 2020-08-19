@@ -10,10 +10,7 @@ import stationery.store.bundle.product.Product;
 import stationery.store.exceptions.EmailExistsException;
 import stationery.store.utilities.Utils;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 
 @Slf4j
@@ -33,9 +30,11 @@ public class CategoryServiceImpl implements CategoryService {
         return categories;
     }
 
+
     @Override
-    public List<Category> findAll(Integer page, Integer pageSize, String sortBy) {
-        Pageable pageable = Utils.pageable(page, pageSize, sortBy);
+    public List<Category> findAll(int page, int pageSize) {
+
+        Pageable pageable = Utils.pageable(page, pageSize);
         Page<Category> categories =  categoryDAO.findAll(pageable);
 
         List<Category> categoryList = new LinkedList<>();
@@ -67,10 +66,6 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryDAO.save(object);
     }
 
-    @Override
-    public Category update(Category oldObject, Category newObject) throws EmailExistsException {
-        return null;
-    }
 
     @Override
     public void delete(Category object) {

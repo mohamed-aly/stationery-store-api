@@ -52,5 +52,10 @@ public class Utils {
         return pageable;
     }
 
+    public static Pageable pageable(int page, int pageSize){
+        Pageable pageable = PageRequest.of(page, pageSize);
+        return pageable;
+    }
+
 
 }

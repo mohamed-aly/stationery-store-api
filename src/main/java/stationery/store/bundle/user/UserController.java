@@ -39,7 +39,7 @@ public class UserController {
     @GetMapping("/all")
     public Map<UserType, List<User>> getUsers() {
 
-        Set<User> users = userService.findAll();
+        Set<User> users = (Set<User>) userService.findAll();
 
         return users.stream()
                 .collect(groupingBy(User::getUserType));

@@ -8,6 +8,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import stationery.store.bundle.category.Category;
+import stationery.store.exceptions.EmailExistsException;
 import stationery.store.utilities.Utils;
 
 import java.util.*;
@@ -34,25 +35,49 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> findAll(int page, int pageSize, String sortBy) {
+    public List<Product> findAll(int page, int pageSize) {
 
-        Pageable pageable = Utils.pageable(page, pageSize, sortBy);
-        Page<Product> products =  productDAO.findAll(pageable);
+        Pageable pageable = Utils.pageable(page, pageSize);
+        Page<Product> productPage =  productDAO.findAll(pageable);
 
-        List<Product> productSet = new LinkedList<>();
-        products.iterator().forEachRemaining(productSet::add);
+        List<Product> products = new LinkedList<>();
+        productPage.stream().forEach(products::add);
 
-        return productSet;
+        return products;
     }
 
+    @Override
+    @Transactional
+    public Product findById(Long aLong) {
+        return productDAO.findById(aLong).orElse(null);
+    }
 
     @Override
+    @Transactional
+    public Product save(Product object) throws EmailExistsException {
+        return productDAO.save(object);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Product object) {
+        productDAO.delete(object);
+    }
+
+    @Override
+    @Transactional
+    public void deleteById(Long aLong) {
+        productDAO.deleteById(aLong);
+    }
+
+    @Override
+    @Transactional
     public Set<Product> findBestSellers() {
         return productDAO.findBestSellers();
     }
 
-
     @Override
+    @Transactional
     public Set<Product> getCategoryProducts(long categoryId, int page, int size, String sort) {
         Pageable pageable = Utils.pageable(page, size, sort);
         Category category = new Category();

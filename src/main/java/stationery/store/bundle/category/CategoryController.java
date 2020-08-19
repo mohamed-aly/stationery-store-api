@@ -6,6 +6,7 @@ import stationery.store.bundle.product.Product;
 import stationery.store.bundle.product.ProductService;
 import stationery.store.exceptions.EmailExistsException;
 
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -28,17 +29,15 @@ public class CategoryController {
 
     @GetMapping({"", "/all"})
     public Set<Category> getAll() {
-
-        Set<Category> categories = categoryService.findAll();
-
+        Set<Category> categories = new LinkedHashSet<>();
+        categoryService.findAll().iterator().forEachRemaining(category -> categories.add(category));
         return categories;
     }
 
     @GetMapping(value = "/paged")
     public List<Category> getCategories(@RequestParam(value = "page", required = false, defaultValue = "5") Integer page,
-                                        @RequestParam(value = "size", required = false, defaultValue = "10") Integer size,
-                                        @RequestParam(value = "sort", required = false, defaultValue = "id") String sort) {
-        return categoryService.findAll(page, size, sort);
+                                        @RequestParam(value = "size", required = false, defaultValue = "10") Integer size) {
+        return categoryService.findAll(page, size);
     }
 
     @GetMapping("/{id}")

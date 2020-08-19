@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import stationery.store.bundle.user.UserType;
 import stationery.store.exceptions.EmailExistsException;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -32,6 +33,8 @@ public class CustomerServiceImpl implements CustomerService {
         customerDAO.findAll().iterator().forEachRemaining(customers::add);
         return customers;
     }
+
+
 
 
     @Override

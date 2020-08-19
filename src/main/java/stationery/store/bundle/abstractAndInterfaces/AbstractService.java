@@ -1,18 +1,19 @@
 package stationery.store.bundle.abstractAndInterfaces;
 
+import stationery.store.bundle.product.Product;
 import stationery.store.exceptions.EmailExistsException;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 public interface AbstractService<T, ID> {
 
-    Set<T> findAll();
+    Collection<T> findAll();
 
     T findById(ID id);
 
     T save(T object) throws EmailExistsException;
-
-    T update(T oldObject, T newObject) throws EmailExistsException;
 
     void delete(T object);
 

@@ -27,8 +27,5 @@ public interface ProductDAO extends JpaRepository<Product, Long> {
     @EntityGraph(value = "Product.imageUrl")
     Set<Product> findBestSellers();
 
-    @Query("select p from Product p where p.category.id=:categoryId")
-    Page<Product> getCategoryProducts(long categoryId, Pageable pageable);
-
     Page<Product> findByCategory(Category category, Pageable pageable);
 }

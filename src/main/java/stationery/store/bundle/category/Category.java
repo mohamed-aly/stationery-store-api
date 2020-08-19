@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
 import stationery.store.bundle.abstractAndInterfaces.BaseEntity;
 import stationery.store.bundle.product.Product;
 
@@ -31,7 +32,7 @@ public class Category extends BaseEntity {
     private String description;
 
     @Column(name = "image_url")
-    private String imageUrl;
+    private String imageUrl = "default category image url";
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="main_category")
