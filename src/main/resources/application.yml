@@ -1,5 +1,7 @@
 server:
-  port: 8080
+  port: 8081
+  servlet:
+    context-path: /stationery-store-api
 
 
 spring:
@@ -46,7 +48,6 @@ auth:
     c6pfPryFKgOz8VUvXEdPmuLj/OyMS9iOL7JXyPZGBKKPWPfELRruFGdMXb3Cq0kq
     atcao82eHDMBEAHOYMUGf5BUIm5MYV4hz7wxaFwWWj9RfDLz/C95frAfs0SRWzbc
     DJmj7ayL3KoQ4fKDLICZxd0=
-  header: Authorization
 
 default:
   productImageUrl: default Product Image Url

@@ -4,10 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import stationery.store.config.jwt.TokenUtil;
 import stationery.store.exceptions.EmailExistsException;
 
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,12 +17,10 @@ public class UserServiceImpl implements UserService {
 
     private UserDAO userDAO;
     private PasswordEncoder passwordEncoder;
-    private TokenUtil tokenUtil;
 
-    public UserServiceImpl(UserDAO userDAO, PasswordEncoder passwordEncoder, TokenUtil tokenUtil) {
+    public UserServiceImpl(UserDAO userDAO, PasswordEncoder passwordEncoder) {
         this.userDAO = userDAO;
         this.passwordEncoder = passwordEncoder;
-        this.tokenUtil = tokenUtil;
     }
 
     @Override

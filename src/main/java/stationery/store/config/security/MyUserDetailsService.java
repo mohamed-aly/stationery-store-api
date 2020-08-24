@@ -1,5 +1,6 @@
 package stationery.store.config.security;
 
+import com.google.common.base.Preconditions;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -21,6 +22,8 @@ public class MyUserDetailsService implements UserDetailsService {
 
 
     public UserDetails loadUserByUsername(final String email) throws UsernameNotFoundException {
+        Preconditions.checkNotNull(email);
+
         final User user = userDAO.findByEmail(email);
         if (user == null) {
             throw new UsernameNotFoundException("No user found with username: " + email);
