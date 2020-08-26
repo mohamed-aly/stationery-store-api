@@ -65,14 +65,29 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(final ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
-                .withClient("live-test")
-                .secret(passwordEncoder().encode("eyml297538"))
-                .authorizedGrantTypes("password", "refresh_token")
-                .refreshTokenValiditySeconds(3600 * 24)
-                .scopes("stationery-store-api")
-                .autoApprove("stationery-store-api")
-                .accessTokenValiditySeconds(3600);
+        clients
+
+                .inMemory()
+                .withClient("trustedClient")
+                .secret(passwordEncoder().encode("trustedSecret"))
+                .authorizedGrantTypes("client_credentials", "refresh_token")
+                .accessTokenValiditySeconds(3600)
+                .refreshTokenValiditySeconds(3600*24)
+                .autoApprove("read", "write")
+                .scopes("read", "write")
+
+                .and()
+                .withClient("readOnlyClient")
+                .secret("ReadSecret")
+                .authorizedGrantTypes("client_credentials")
+                .scopes("read")
+
+                .and()
+                .withClient("writeOnlyClient")
+                .secret("WriteSecret")
+                .authorizedGrantTypes("client_credentials")
+                .scopes("write")
+        ;
 
     }
 

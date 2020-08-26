@@ -1,54 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b94eca62-b985-45b9-b53a-4a9529e53958" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_restassured_json_path_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_restassured_rest_assured_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_restassured_rest_assured_common_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_restassured_xml_path_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ccil_cowan_tagsoup_tagsoup_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_json_2_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_xml_2_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_oauth_boot_spring_security_oauth2_autoconfigure_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_oauth_spring_security_oauth2_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_jwt_1_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/AuthenticationManagerProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/AuthorizationServerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/CustomTokenEnhancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/ResourceServerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" beforeDir="false" />
+    <list default="true" id="17d8adfc-44a9-4a0c-ab4f-11246d50b687" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/MyCustomClientDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/ResourceSeverConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/AccessTokenGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/SqlScriptEnhancer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/StationeryStoreApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/StationeryStoreApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bootstrap/BootStrapMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bootstrap/BootStrapMySQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/AuthFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/JwtResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/SignInRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/jwt/TokenUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/MyUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/AuthorizationServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/AuthorizationServerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/ResourceServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stationery-store-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/stationery-store-api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/StationeryStoreApiApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/StationeryStoreApiApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bootstrap/BootStrapMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bootstrap/BootStrapMySQL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/utilities/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/utilities/Utils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +85,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1fDU2TN0bDOcwIMgCd3KWwFPIC1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="compactDirectories" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -138,7 +107,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/stationery/store/config/security" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.VCS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -315,10 +284,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1596707176895" />
-    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1598258581613">
+    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser" timestamp="1598452906717">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598258581613" />
+    <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598452906717" />
     <state x="297" y="290" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1595927239929">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -339,38 +308,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597308089721" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1598262401983">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1598452365608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598262401983" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1598262401983">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598452365608" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1598452365607">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598262401983" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1598262401983">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598452365607" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1598452365607">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598262401983" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1598262401983">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598452365607" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1598452365607">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598262401983" />
-    <state width="1323" height="179" key="GridCell.Tab.1.bottom" timestamp="1598262401983">
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598452365607" />
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom" timestamp="1598452365608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598262401983" />
-    <state width="1323" height="179" key="GridCell.Tab.1.center" timestamp="1598262401983">
+    <state width="1323" height="179" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598452365608" />
+    <state width="1323" height="179" key="GridCell.Tab.1.center" timestamp="1598452365608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1598262401983" />
-    <state width="1323" height="179" key="GridCell.Tab.1.left" timestamp="1598262401983">
+    <state width="1323" height="179" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1598452365608" />
+    <state width="1323" height="179" key="GridCell.Tab.1.left" timestamp="1598452365608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1598262401983" />
-    <state width="1323" height="179" key="GridCell.Tab.1.right" timestamp="1598262401983">
+    <state width="1323" height="179" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1598452365608" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right" timestamp="1598452365608">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1598262401983" />
+    <state width="1323" height="179" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1598452365608" />
     <state width="211" height="457" key="HiddenNamespacesPopup" timestamp="1596707307146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -379,10 +348,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="20" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1595767013792" />
-    <state x="321" y="15" key="SettingsEditor" timestamp="1597309644422">
+    <state x="321" y="15" key="SettingsEditor" timestamp="1598448166670">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597309644422" />
+    <state x="321" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1598448166670" />
     <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1598094950472">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

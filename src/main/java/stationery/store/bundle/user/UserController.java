@@ -59,13 +59,12 @@ public class UserController {
 //        return response;
 //    }
 
-//    @PostMapping("/{type}/signUp")
-//    public User signUp(@RequestBody User user, @PathVariable String type) throws EmailExistsException {
-//        User savedUser = userService.saveWithEncryption(user, UserType.valueOf(type.toUpperCase()));
-//        savedUser.setToken(tokenUtil.generateToken(savedUser));
-//        savedUser.setCreated(LocalDate.now());
-//        return savedUser;
-//    }
+    @PostMapping("/{type}/signUp")
+    public User signUp(@RequestBody User user, @PathVariable String type) throws EmailExistsException {
+        User savedUser = userService.saveWithEncryption(user, UserType.valueOf(type.toUpperCase()));
+        savedUser.setCreated(LocalDate.now());
+        return savedUser;
+    }
 
     @PatchMapping("/update")
     public User updateUser(Authentication authentication, @RequestBody User newUser) throws EmailExistsException {

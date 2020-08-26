@@ -5,12 +5,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -18,11 +20,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
-@EnableResourceServer
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true)
 @ComponentScan({"stationery.store.config.security"})
-public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
+@Order(4)
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final String[] PUBLIC_ENDPOINTS = {
             "**/oauth/token",
@@ -42,10 +43,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 
     private PasswordEncoder passwordEncoder;
 
-    @Value("${auth.secret}")
-    private String signingKey;
-
-    public ResourceServerConfiguration(MyUserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
+    public SecurityConfig(MyUserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
         super();
 
         this.userDetailsService = userDetailsService;
