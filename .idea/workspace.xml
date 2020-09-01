@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17d8adfc-44a9-4a0c-ab4f-11246d50b687" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/MyCustomClientDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/ResourceSeverConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/AccessTokenGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/SqlScriptEnhancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/StationeryStoreApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/StationeryStoreApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/bundle/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/AuthorizationServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/AuthorizationServerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/ResourceServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/config/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stationery/store/utilities/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/StationeryStoreApiApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/StationeryStoreApiApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/bundle/user/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stationery/store/utilities/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stationery/store/utilities/Utils.class" afterDir="false" />
+    <list default="true" id="b94eca62-b985-45b9-b53a-4a9529e53958" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +56,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -262,6 +250,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="changed to spring boot" />
     <MESSAGE value="fixed guava version" />
     <MESSAGE value="added h2 database" />
@@ -273,7 +262,8 @@
     <MESSAGE value="enhanced the jwt token and implemented update user endpoint" />
     <MESSAGE value="implemented category endpoints" />
     <MESSAGE value="restoring jwt version of the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="restoring jwt version of the project" />
+    <MESSAGE value="restoration" />
+    <option name="LAST_COMMIT_MESSAGE" value="restoration" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#Assign_Data_Sources" timestamp="1595848018943">
